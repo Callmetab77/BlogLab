@@ -56,7 +56,7 @@ namespace BlogLab.Web.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Photo>>> GetByApplicationUserId()
         {
-            int applicationUserId = int.Parse(User.Claims.First(i => i.Type == JwtRegisteredClaimNames.NameId).Value;
+            int applicationUserId = int.Parse(User.Claims.First(i => i.Type == JwtRegisteredClaimNames.NameId).Value);
 
             var photos = await _photoRepository.GetAllByUserIdAsync(applicationUserId);
 
