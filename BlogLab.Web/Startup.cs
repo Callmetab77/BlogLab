@@ -41,7 +41,7 @@ namespace BlogLab.Web
 
             services.AddScoped<IBlogRepository, BlogRepository>();
             services.AddScoped<IBlogCommentRepository, BlogCommentRepository>();
-            services.AddScoped<IAccountRepository, IAccountRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IPhotoRepository, PhotoRepository>();
 
             services.AddIdentityCore<ApplicationUserIdentity>(options =>
